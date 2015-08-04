@@ -1,0 +1,45 @@
+<html >
+<head>
+       <!--external javascript-->
+</head>
+<body>
+
+<h1>Login Form</h1>
+
+<form name="form"  method="post" action="">
+
+<table border='0'>
+ <tr>
+
+  <td><LABEL for="username">Userame :<sup style="color:#F00">*</sup> </LABEL></td>
+         <td><INPUT type="text" name="username"></td>
+
+  </tr>
+  
+  <tr>
+
+  <td><LABEL for="password">password :<sup style="color:#F00">*</sup> </LABEL></td>
+         <td><INPUT type="password" name="password"></td>
+
+  </tr>
+  
+  <tr>
+  <td></td><td><br/><INPUT type="submit" onclick="" value="Submit">
+ </tr>
+ <tr>
+    </form>
+
+    <script type="text/javascript">
+
+    function sendFromHTML(form) {
+
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', form.action, true);
+        //xhr.onload = function(e) { alert(this.responseText) };
+        xhr.send(formData);
+        return false;
+    }
+    </script>
+     </body>
+	      </html>

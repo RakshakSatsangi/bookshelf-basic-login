@@ -1,0 +1,80 @@
+<html >
+<head>
+       <!--external javascript-->
+</head>
+<body>
+
+
+
+<h1>Institute Registration Form</h1>
+
+<form name="form"  method="post" action="/api/institutes">
+
+<table border='0'>
+ <tr>
+
+  <td><LABEL for="collegename">College Name:<sup style="color:#F00">*</sup> </LABEL></td>
+         <td><INPUT type="text" name="collegename"></td>
+
+  </tr>
+  
+  <tr>
+
+  <td><LABEL for="collegecode">College Code:<sup style="color:#F00">*</sup> </LABEL></td>
+         <td><INPUT type="text" name="collegecode"></td>
+
+  </tr>
+  
+  <tr>
+  <td><LABEL for="session">Session:<sup style="color:#F00">*</sup> </LABEL></td>
+
+  <td><INPUT type="text" name="session"></td>
+ </tr>
+ 
+ <tr>
+  <td><LABEL for="address" style="text-align:left;">Address:<sup style="color:#F00">*</sup> </LABEL></td>
+  <td><textarea id="address"  name="address" rows="4" cols="20"></textarea>  
+  </td>
+ </tr>
+ <tr>
+  <td><LABEL for="contctno">Contact Number:<sup style="color:#F00">*</sup> </LABEL></td>
+  <td><INPUT type="text" id="contctno" name="contact"></td>
+ </tr>
+ <tr>
+  <td><LABEL for="email">Email:<sup style="color:red;">*</sup> </LABEL></td>
+  <td><INPUT type="text" id="email" name="email"></td>
+ </tr>
+
+<tr>
+
+  <td><LABEL for="password">Password:<sup style="color:#F00">*</sup> </LABEL></td>
+         <td><INPUT type="password" name="password"></td>
+
+  </tr>
+   
+ <tr>
+  <td></td><td><br/><INPUT type="submit" onclick="" value="Submit">
+  <INPUT type="reset" onClick="return confirmreset()"></td>
+ </tr>
+ <tr>
+  <td></td><td style="font-size:12px;text-align:right;"><br/><i style="color:red;font-size:12px;align:right;" >* - Mandatory</i></td>
+ </tr>
+    </table>
+ </FORM></center>
+
+ <!-- using ajax to send form data -->
+
+ <script type="text/javascript">
+
+    function sendFormFromHTML(form) {
+
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', form.action, true);
+        //xhr.onload = function(e) { alert(this.responseText) };
+        xhr.send(formData);
+        return false;
+    }
+    </script>
+</body>
+</html>
